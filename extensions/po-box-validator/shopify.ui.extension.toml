@@ -2,8 +2,11 @@ type = "checkout_ui_extension"
 name = "po-box-validator"
 
 extension_points = [
-  'Checkout::Dynamic::Render'
+  'Checkout::DeliveryAddress::RenderBefore'
 ]
+
+[capabilities]
+block_progress = true
 
 # [[metafields]]
 # namespace = "my-namespace"
@@ -12,11 +15,3 @@ extension_points = [
 # [[metafields]]
 # namespace = "my-namespace"
 # key = "my-key-2"
-
-# Read more on extension settings at https://shopify.dev/api/checkout-extensions/checkout/configuration
-# [settings]
-#   [[settings.fields]]
-#   key = "banner_title"
-#   type = "single_line_text_field"
-#   name = "Banner title"
-#   description = "Enter a title for the banner"

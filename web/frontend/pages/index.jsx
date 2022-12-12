@@ -12,12 +12,11 @@ import { TitleBar } from "@shopify/app-bridge-react";
 
 import { trophyImage } from "../assets";
 
-import { ProductsCard } from "../components";
 
 export default function HomePage() {
   return (
     <Page narrowWidth>
-      <TitleBar title="App name" primaryAction={null} />
+      <TitleBar title="Max Validation" primaryAction={null} />
       <Layout>
         <Layout.Section>
           <Card sectioned>
@@ -29,39 +28,12 @@ export default function HomePage() {
             >
               <Stack.Item fill>
                 <TextContainer spacing="loose">
-                  <Heading>Nice work on building a Shopify app 🎉</Heading>
+                  <Heading>Welcome to your PO Box Validations Checkout Extension app!</Heading>
                   <p>
-                    Your app is ready to explore! It contains everything you
-                    need to get started including the{" "}
-                    <Link url="https://polaris.shopify.com/" external>
-                      Polaris design system
-                    </Link>
-                    ,{" "}
-                    <Link url="https://shopify.dev/api/admin-graphql" external>
-                      Shopify Admin API
-                    </Link>
-                    , and{" "}
-                    <Link
-                      url="https://shopify.dev/apps/tools/app-bridge"
-                      external
-                    >
-                      App Bridge
-                    </Link>{" "}
-                    UI library and components.
+                    This is a custom checkout extension app designed to validate the shipping address and prevent the use of PO Boxes.
                   </p>
                   <p>
-                    Ready to go? Start populating your app with some sample
-                    products to view and test in your store.{" "}
-                  </p>
-                  <p>
-                    Learn more about building out your app in{" "}
-                    <Link
-                      url="https://shopify.dev/apps/getting-started/add-functionality"
-                      external
-                    >
-                      this Shopify tutorial
-                    </Link>{" "}
-                    📚{" "}
+                    If you are ready to get started, navigate to your store <strong>Settings</strong> &gt; <strong>Checkout and account</strong> &gt; and proceed to the <strong>Checkout Editor</strong>.
                   </p>
                 </TextContainer>
               </Stack.Item>
@@ -69,16 +41,13 @@ export default function HomePage() {
                 <div style={{ padding: "0 20px" }}>
                   <Image
                     source={trophyImage}
-                    alt="Nice work on building a Shopify app"
+                    alt="Welcome to your Validations Checkout Extension app"
                     width={120}
                   />
                 </div>
               </Stack.Item>
             </Stack>
           </Card>
-        </Layout.Section>
-        <Layout.Section>
-          <ProductsCard />
         </Layout.Section>
       </Layout>
     </Page>
